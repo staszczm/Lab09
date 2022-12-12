@@ -1,1 +1,0 @@
-/tmp/VirtualBox Dropped Files/2022-12-12T20:01:42.220184000Z/gauss.c
