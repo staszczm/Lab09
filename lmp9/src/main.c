@@ -6,6 +6,9 @@
 
 // komentarz testowy
 
+// komentarz testowy v2
+//
+
 int main(int argc, char ** argv) {
 	int res;
 	Matrix * A = readFromFile(argv[1]);
