@@ -7,7 +7,7 @@
 // komentarz testowy
 
 // komentarz testowy v2
-//
+
 
 int main(int argc, char ** argv) {
 	int res;
@@ -23,12 +23,12 @@ int main(int argc, char ** argv) {
 	res = eliminate(A,b);
 	x = createMatrix(b->r, 1);
 	if (x != NULL) {
-		res = backsubst(x,A,b);
+            res = backsubst(x,A,b);
 
-		printToScreen(x);
+            printToScreen(x);
 	  freeMatrix(x);
 	} else {
-					fprintf(stderr,"Błąd! Nie mogłem utworzyć wektora wynikowego x.\n");
+            fprintf(stderr,"Błąd! Nie mogłem utworzyć wektora wynikowego x.\n");
 	}
 
 	freeMatrix(A);
