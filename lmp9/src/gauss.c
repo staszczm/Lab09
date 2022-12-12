@@ -1,14 +1,1 @@
-#include "gauss.h"
-
-/**
- * Zwraca 0 - elimnacja zakonczona sukcesem
- * Zwraca 1 - macierz osobliwa - dzielenie przez 0
- */
-int eliminate(Matrix *mat, Matrix *b){
-    /**
-  	 * Tutaj należy umieścić właściwą implemntację.
-		 */
-
-		return 0;
-}
-
+/tmp/VirtualBox Dropped Files/2022-12-12T20:01:42.220184000Z/gauss.c
