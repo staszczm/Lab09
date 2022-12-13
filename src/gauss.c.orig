@@ -38,12 +38,27 @@ int eliminate(Matrix *mat, Matrix *b) {
     /// przeksztalcenie macierzy A w macierz gorna-trojkatna z wyborem elementu dominujaacego
     for (column = 0; column < size - 1; column++) {
         int column_max = column;
+<<<<<<< HEAD
+        for (row = column + 1; row < size; row++)
+            if(absolute(mat->data[row][column]) > absolute(mat->data[column_max][column]))
+                column_max = row;
+        if(column_max != column) {
+            swap(mat->data[column], mat->data[column_max]);
+            swap(b->data[column], b->data[column_max]);
+=======
         for(int row = column+1; row<size; row++){
             if ( fabs(mat->data[row][column]) < fabs(mat->data[column_max][column]))
+                column_max = row;
             if(column_max != column){
                 double *tmp = mat->data[column];
                 mat->data[column] = mat->data[column_max];
                 mat->data[column_max] = tmp;
+                double *btmp = b->data[column];
+                b->data[column] = b->data[column_max];
+                b->data[column_max] = btmp;  
+            }
+>>>>>>> f42b0abfe3f86bbd9bc03f6cb913ece470ad129d
+        }
         for (row = column + 1; row < size; row++) {
             if (mat->data[column][column] == 0) {
                 fprintf(stderr, "Podana macierz jest osobliwa!\n");
