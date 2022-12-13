@@ -29,14 +29,14 @@ int eliminate(Matrix *mat, Matrix *b) {
         for(int row = column+1; row<size; row++){
             if ( fabs(mat->data[row][column]) < fabs(mat->data[column_max][column]))
                 column_max = row;
-                if(column_max != column){
-                    double *tmp = mat->data[column];
-                    mat->data[column] = mat->data[column_max];
-                    mat->data[column_max] = tmp;
-                    double *btmp = b->data[column];
-                    b->data[column] = b->data[column_max];
-                    b->data[column_max] = btmp;  
-                }
+            if(column_max != column){
+                double *tmp = mat->data[column];
+                mat->data[column] = mat->data[column_max];
+                mat->data[column_max] = tmp;
+                double *btmp = b->data[column];
+                b->data[column] = b->data[column_max];
+                b->data[column_max] = btmp;  
+            }
         }
         for (row = column + 1; row < size; row++) {
             if (mat->data[column][column] == 0) {
