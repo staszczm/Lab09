@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "gauss.h"
+#include <math.h>
 
 /**
  * Zwraca 0 - elimnacja zakonczona sukcesem
@@ -24,6 +25,18 @@ int eliminate(Matrix *mat, Matrix *b) {
 
     /// przeksztalcenie macierzy A w macierz gorna-trojkatna
     for (column = 0; column < size - 1; column++) {
+        int column_max = column;
+        for(int row = column+1; row<size; row++)
+            if ( fabs(mat->data[row][column] > fabs(mat->data[column_max][col]))
+                column_max = row;
+            if(column_max != column){
+                double *tmp = mat->data[column];
+                mat->data[column] = mat->data[column_max];
+                mat->data[column_max] = tmp;
+                double *btmp = b->data[column];
+                b->data[column = b->data[column_max];
+                b->data[column_max] = btmp;  
+            }
         for (row = column + 1; row < size; row++) {
             if (mat->data[column][column] == 0) {
                 fprintf(stderr, "Podana macierz jest osobliwa!\n");
