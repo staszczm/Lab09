@@ -25,10 +25,8 @@ int main(int argc, char **argv) {
     if (res == 0) {
         x = createMatrix(b->r, 1);
         if (x != NULL) {
-            printf("tu jest backsubst\n");
             res = backsubst(x, A, b);
 
-            printf("tu jest macierz X\n");
             printToScreen(x);
             freeMatrix(x);
         } else {
