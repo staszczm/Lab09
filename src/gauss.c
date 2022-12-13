@@ -38,7 +38,7 @@ int eliminate(Matrix *mat, Matrix *b) {
     /// przeksztalcenie macierzy A w macierz gorna-trojkatna z wyborem elementu dominujaacego
     for (column = 0; column < size - 1; column++) {
         int column_max = column;
-        for(int row = column+1; row<size; row++){
+        for(int row = column+1; row<size; row++)
             if ( fabs(mat->data[row][column]) < fabs(mat->data[column_max][column]))
                 column_max = row;
             if(column_max != column){
