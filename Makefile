@@ -20,7 +20,7 @@ test5: all
 	bin/gauss dane/K dane/L
 	
 test6: all
-	bin/gauss dane/M dane/M
+	bin/gauss dane/M dane/N
 	
 test7: all
 	bin/gauss dane/O dane/P
@@ -33,3 +33,6 @@ test9: all
 	
 test10: all
 	bin/gauss dane/U dane/V
+	
+test11: all
+	bin/gauss dane/M dane/M
